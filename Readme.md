@@ -32,3 +32,8 @@ weekly study logs about ios using swift (ref. 꼼꼼한 재은씨의 Swift 기�
    }
 ```
    **Auto Layout(자동 레이아웃)** 화면 사이즈가 달라지더라도 항상 일정한 비율로 간격이 유지 될 수 있도록 돕는 기준선 역활. 
+   
+# Chapter02 iOS 앱의 구조와 코코아 터치 프레임워크
+### 2.1 앱의 기본 구조  
+### 2.2 iOS와 코코아 터치 프레임워크  
+### 2.3 앱을 구성하는 핵심 객체들    

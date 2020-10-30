@@ -42,14 +42,14 @@ weekly study logs about ios using swift (ref. 꼼꼼한 재은씨의 Swift 기�
 
   여기서, 반환된 **UIApplication객체**는 앱의 본체라고 할 수 있는 객체로 작성한 코드나 객체, 앱의 기능이라고 생각하는 모든 것들은 다 여기에 속해있는 하위 객체라고 생각하면 된다. 역활은 이벤트 루프나 다른 높은 수준의 앱 동작을 관리할 뿐만 아니라 푸시 알림과 같은 특수한 이벤트를 커스텀 객체인 델리게이트에게 알려주기도 한다. 주로 다루기 어렵고 까다로워 서브클래싱 없이 그대로 사용한다. 그래서 **AppDelegate**이라는 대리 객체를 내세우고 커스텀 코드를 수행할수 있도록 약간의 권한을 부여한다. AppDelegate은 iOS 애플리케이션 내에서 오직 하나의 인스턴스만 생성되도록 시스템적으로 보장받고 앱에 처음 만들어질 때 객체가 생성되어 앱이 실행되는 동안 유지 되다가 종료되면 함께 소멸 하는 등 앱 전체의 생명 주기와 함께한다.  
   
- > 전체 과정을 정리를 해보면 :   
-    * main() 함수가 실행된다  
-    * main() 함수는 다시 UIApplicationMain()함수를 호출한다  
-    * UIApplicationMain() 함수는 앱의 본체에 해당하는 UIApplication 객체를 생성한다  
-    * UIApplication 객체는 Info.plist 파일을 바탕으로 앱에 필요한 데이터와 객체를 로드한다  
-    * AppDelegate 객체를 생성하고 UIApplication 객체와 연결한다  
-    * 이벤트 루프를 만드는 등 실행에 필요한 준비를 진행한다  
-    * 실행 완료 직전 앱 델리게이트의 application(_: didFinishLaunchingWithOption:)메소드를 호출한다.    
+  전체 과정을 정리를 해보면 :   
+     * main() 함수가 실행된다  
+     * main() 함수는 다시 UIApplicationMain()함수를 호출한다  
+     * UIApplicationMain() 함수는 앱의 본체에 해당하는 UIApplication 객체를 생성한다  
+     * UIApplication 객체는 Info.plist 파일을 바탕으로 앱에 필요한 데이터와 객체를 로드한다  
+     * AppDelegate 객체를 생성하고 UIApplication 객체와 연결한다  
+     * 이벤트 루프를 만드는 등 실행에 필요한 준비를 진행한다  
+     * 실행 완료 직전 앱 델리게이트의 application(_: didFinishLaunchingWithOption:)메소드를 호출한다.    
     
 반면 **Swift언어는** C기반의 언어가 아니기때문에 main.m 파일이 존재하지않으며 엔트리 포인트 역시 존재하지 않기때문에 위의 1~5번 과정을 어노테이션으로 대체한다. 
    ```swift
